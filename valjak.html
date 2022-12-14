@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widht=device width, initial-scale=1.0">
+    <title>Program za racunanje zapremine valjka</title>
+    </head>
+    <body>
+        <h1> Program za racunanje zapremine valjka</h1>
+        <label for="baseRadius">Poluprecnik</label><br>
+        <input type="number" id="baseRadius" name="Poluprecnik"><br>
+
+        <label for="height">Visina</label><br>
+        <input type="number" id="height" name="visina"><br>
+        
+        <input type="submit" value="Izracunati" onclick="cylinderCalculator()">
+
+        <script>
+            const r_baseRadius = document.getElementById("baseRadius");
+            const H_height = document.getElementById("height");
+
+            function cylinderCalculator ()
+            {
+                const r = parseInt(r_baseRadius.value);
+                const h = parseInt(H_height.value);
+
+                const V = Math.pow(r,2)*Math.PI*h;
+                alert ("Zapremina valjka:" + V)
+            }
+        </script>
+    </body>
+</html>
